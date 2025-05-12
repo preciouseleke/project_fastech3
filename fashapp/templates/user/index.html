@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sustainable fashion hub</title>
+    <link rel="stylesheet" type="text/css" href="/static/assets/fa/css/all.min.css">
+    <link rel="stylesheet" href="static/assets/css/main.css">
+    <link rel="stylesheet" href="/static/assets/bootstrap/css/bootstrap.min.css" >
+    
+    
+    <style type="text/css">
+        
+    </style>
+</head>
+  <body class="custom-color">
+  
+    <nav class="navbar navbar-expand-lg navclass">
+        <div class="container-fluid">
+          <a class="navbar-brand ch" href="index.html">Fashion hub</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 " linky>
+               <li class="nav-item">
+                <a class="nav-link linky" aria-current="page" href="/about/">About</a>
+              </li>
+      
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/contact/">contact</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  dropdown
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="/profile/">customer</a></li>
+                  <li><a class="dropdown-item" href="/dashboard/">Dashboard</a></li>
+                  <li><a class="dropdown-item" href="/pay/">payment</a></li>
+                  <li><a class="dropdown-item" href="/orders/">order</a></li>
+                  <li><a class="dropdown-item" href="/lgas/get/">state</a></li>
+                  <li><a class="dropdown-item" href="/category/">category</a></li>
+                  
+                  
+                  
+                </ul>
+              </li>
+              
+            </ul>
+            <div class="d-flex" role="search">
+            
+              {% if cust_deets %}
+                <a href="/dashboard/" class="btn btn-light btn-sm" type="submit"> Hi {{cust_deets.cust_firstname }}</a>
+                <a href="/logout/" class="btn btn-outline-info btn-sm ms-1" type="submit">Logout</a>
+              {% else %}
+                <a href="/login/" class="btn btn-light btn-sm" type="submit">Login</a>
+                <a href="/register/" class="btn btn-light btn-sm ms-1" type="submit">Register</a>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </nav>
+
+
+      <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="/static/pix/Allcol.jpg" class="d-block w-100 cus-height"  alt="...">
+          <div class="carousel-caption d-none d-md-block glo carodiv mb-5">
+            <h5 class="wear pt-3">We aimed at promoting both African and ready-to-wear designs on a global scale.</h5>
+            <p>we create fashion that goes beyond trends and we also make fashion smarter,sustainable and afforadable</p>
+            
+            <!-- <h5>First slide label</h5>
+            <p>We create African designs that inspired young African woman </p> -->
+          </div>
+          </div>
+        </div> 
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>   
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12 p-md-5 text-center mt-5 my-3 win">
+            <h2 class="ab">ABOUT US</h2>
+            
+          </div>
+        </div>
+        <div class="row st">
+          <div class="col-md-4 text-center mt-5 my-3 shadow p-md-5 pin">
+            <h2>About</h2>
+            <p>This is a FASHTECH aimed at promoting both African and ready-to-wear designs, on a global scale.
+              We create fashion that goes beyond trends and we also make fashion smater,suitable and affordable and highly personalized.
+            </p>
+            
+          </div>  
+          <div class="col-md-4 text-center mt-5 my-3 shadow p-md-5 bur">
+            <h2>Our story</h2>
+            <p>We started as a result of poor deliverability and high demand from client across the world.
+              we desired to make clothing more functional and to solve problems in the industry. </p>
+            
+           </div>
+          <div class="col-md-4 text-center mt-5 my-3 shadow p-md-5 ora">
+            <h2>Our vision</h2>
+            <p>We have a vision to make fashion technology more accessible,durable and also to inspire and make life easier for everyone to know what fashion can do.</p>
+            
+          </div>
+
+          
+        </div>
+          
+      </div>
+      <div class="container-fluid">
+        <div class="row cad">  
+          <div class="col-md-4 text-center mt-5 my-3 shadow p-md-5 sti">
+            <div class="card" style="width: 16rem;">
+              <img src="/static/pix/cloth.jpg" class="clo" alt="..." >
+              <div class="card-body">
+                <h5 class="ca">Elegance in every stitches</h5>
+                <p class="card-text ">A simple and classic style, ideal for evening galas,parties and friendly events.</p>
+                <a href="/crepe/" class="btn btn-danger">Learn More</a>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-md-4 text-center mt-5 my-3 shadow p-md-5">
+            <div class="card" style="width: 16rem;">
+              <img src="/static/pix/cloth2.jpg" class="" alt="..." >
+              <div class="card-body">
+                <h5 class="tap">Vibrant style for kids</h5>
+                <p class="card-text ">This beautiful Ankara dress is designed to bring out your child's vibrant personallity.Made with high-quality,pattern dress</p>
+                <a href="/floral/" class="btn btn-danger">Learn More</a>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-md-4 text-center mt-5 my-3 shadow p-md-5">
+            <div class="card" style="width: 16rem;">
+              <img src="/static/pix/ballg.jpg" class="" alt="..." >
+              <div class="card-body">
+                <h5 class="tap">Vibrant style for kids</h5>
+                <p class="card-text ">This beautiful ball grown dress is designed to bring out your child's vibrant personallity.Made with high-quality,satin dress with baby net.</p>
+                <a href="/satin/" class="btn btn-danger">Learn More</a>
+              </div>
+            </div>
+
+          </div>
+      </div>
+      
+      <div class="row album py-5 bg-body-tertiary "   >
+        <div class="col-md-10 offset-md-1">
+          <h3 style="margin: bottom 30px;" class="text-center pb-2 border-bottom fs-2 text-body-emphasis">Beautiful pattern dress</h3>
+          <div class="row">
+              <div class="col-md-4 my-4 mt-5 my-3 p-md-4 shadow">
+                <img src="/static/pix/ank.jpg" class="img-fluid">
+                <div class="des">
+                  <h6>classic ankara</h6>
+                  <p><b>Two pieces Ankara</b>:Available in all sizes...</p>
+                </div>
+              </div>
+
+              <div class="col-md-4 my-4 mt-5 my-3 p-md-4 shadow">
+                <img src="/static/pix/afrik2.jpg" class="img-fluid">
+                <div class="des">
+                  <h6 style="margin: bottom 10px;">classic ankara</h6>
+                  <p><b>Two pieces Ankara</b>:Available in all sizes...</p>
+                </div>
+              </div>
+
+              <div class="col-md-4 my-4 mt-5 my-3 p-md-4 shadow">
+                <img src="/static/pix/best1.jpg" class="img-fluid">
+                <div class="des">
+                  <h6>classic ankara</h6>
+                  <p><b>Two pieces Ankara</b>:Available in all sizes...</p>
+                </div>
+              </div>
+
+          </div>
+
+        </div>
+      </div> 
+      
+      <div class="album py-5 bg-body-tertiary">
+        <div class="container">
+    
+            <div class="row">
+                <div class="col"><h2 class="pb-2 border-bottom">Latest design pattern</h2></div>
+            </div>
+    
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 mt-4">
+            
+    
+            <div class="col">
+              <div class="card shadow-sm">
+                <img src="/static/pix/cat8.jpg" class="card-img-top" alt="..." >
+                <div class="card-body">
+                  <h5 class="card-title wears">Summer Wears</h5>
+                  <p class="card-text d-flex justify-content-between align-items-center ">This outfit is designed for warm weather which are adaptable for casual outings,beach days and other events like vacations.</p>
+                </div>
+                <div class="card-footer ">
+                  <small class="text-body-secondary fot">African Print Fabric</small>
+                </div>
+              </div>
+            </div>
+              
+              <div class="col">
+                <div class="card shadow-sm">
+                  <img src="/static/pix/sum.jpg" class="card-img-top" alt="..."  >
+                  <div class="card-body">
+                    <h5 class="card-title sum">Summer Wears</h5>
+                    <p class="card-text d-flex justify-content-between align-items-center ">This outfit is designed to keep you cool,comfortable, and stylish while adapting to the warm weather,provide freedom of movement,allow circulation and reduces heat rentention.</p>
+                  </div>
+                  <div class="card-footer ">
+                    <small class="text-body-secondary ft">Cotton Fabric</small>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="card shadow-sm">
+                  <img src="/static/pix/short.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title len"> short-length Gown</h5>
+                    <p class="card-text d-flex justify-content-between align-items-center ">This ankara outfit is designed to give you a smart look,reflect african heritage and It is suitable for casual,traditional and formal event.</p>
+                  </div>
+                  <div class="card-footer ">
+                    <small class="text-body-secondary foot ">African Print Fabric</small>
+                  </div>
+                </div>
+              </div>
+    
+    
+            
+          </div>
+        </div>
+      </div>
+      
+      <div class="container-fluid">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 mt-4">
+          <div class="col-md-5 my-4 mt-5 my-3 p-md-4">
+            <img src="/static/pix/group (1).jpg"class="img-fluid ps-5" >
+          </div>
+          <div class="col-md-4 my-4 mt-5 my-3 p-md-4">
+            <h2>Discover More patterns</h2>
+            <p class=" pe-5">Fashion is more than clothing.It's an expression of your personality,creativity and confidence.
+            Step into a world of endless possibilities.Discover the latest collections and find your perfect match.Don't wait-unlock your potential to turn heads and set trends</p>
+            
+          </div>
+          
+          <div class="col-md-3 my-4 mt-5 my-3 p-md-4">
+            <img src="/static/pix/sew1.jpg" class="img-fluid ps-5">
+          </div>
+        
+        
+        
+        </div>
+      </div>
+      <div class="container-fluid linky ">
+        <footer class="py-3 my-4">
+          <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">dropdown</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Contact</a></li>
+          </ul>
+          <p class="text-center text-body-secondary">© 2024  FASHTECH.  Preleo, Inc</p>
+        </footer>
+      </div>
+    </div>  
+    <script src="bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $('#state').change(function(){
+          var state_id = $(this).val();
+          var csrf_token = '{{ csrf_token }}';
+
+          $.ajax({
+            url: '/lgas/get/',
+            type: 'POST',
+            data: { state_id: state_id },
+            headers: { "X-CSRFToken": csrf_token },
+            success: function(resp){
+              $('#lga').html(resp);
+            },
+            error: function(xhr, status, error) {
+              console.log("Error: " + error);
+            }
+          });
+        });
+      });
+    </script>
+
+    </script>
+    
+  </body>
+
+</html>

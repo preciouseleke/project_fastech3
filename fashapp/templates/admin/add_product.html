@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sustainable Fashion Hub</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/assets/fa/css/all.min.css">
+    <link rel="stylesheet" href="/static/assets/css/main.css">
+
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+        }
+        .navclass {
+            background-color: #9c5858 !important;
+            position: sticky !important;
+            top: 0;
+            z-index: 1000;
+        }
+        .form-container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 30px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .btn-custom {
+            background-color: #9c5858;
+            border-color: #9c5858;
+        }
+        .btn-custom:hover {
+            background-color: #7a4242;
+            border-color: #7a4242;
+        }
+        footer {
+            background-color: #9c5858;
+            color: white;
+            padding: 20px 0;
+        }
+        footer a {
+            color: white !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="container form-container">
+        <h2 class="text-center mb-4">Add Product</h2>
+        
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ category }}">{{ message }}</div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+        
+        <form method="POST" enctype="multipart/form-data">
+            {{ form.hidden_tag() }}
+            
+            <div class="mb-3">
+                <label for="pro_name" class="form-label">Product Name</label>
+                {{ form.pro_name(class="form-control", placeholder="Enter product name") }}
+            </div>
+            
+            <div class="mb-3">
+                <label for="pro_design_id" class="form-label">Design</label>
+                {{ form.pro_design_id(class="form-select") }}
+            </div>
+            
+            <div class="mb-3">
+                <label for="price_amt" class="form-label">Price</label>
+                {{ form.price_amt(class="form-control", placeholder="Enter price") }}
+            </div>
+            
+            <div class="mb-3">
+                <label for="pro_status" class="form-label">Status</label>
+                {{ form.pro_status(class="form-select") }}
+            </div>
+            
+            <div class="mb-3">
+                <label for="pro_picture" class="form-label">Product Image</label>
+                {{ form.pro_pix(class="form-control") }}
+            </div>
+            
+            <button type="submit" class="btn btn-custom w-100">Add Product</button>
+        </form>
+    </div>
+    
+    <footer class="text-center mt-5">
+        <div class="container">
+            <ul class="nav justify-content-center mb-3">
+                <li class="nav-item"><a href="/adminlog/" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="/admin-dashboard/" class="nav-link">About</a></li>
+                
+                
+            </ul>
+            <p>© 2024 FASHTECH. Preleo, Inc.</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sustainable Fashion - Profile Page</title>
+    <link rel="stylesheet" type="text/css" href="/static/assets/fa/css/all.min.css">
+    <link rel="stylesheet" href="/static/assets/css/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    
+    <style>
+        body {
+            background-color: #f8f9fa; /* Off-white */
+            color: #4a3f35; /* Dark brown for readability */
+        }
+        .profile-container {
+            background-color: #fff; /* White background for contrast */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .form-control {
+            background-color: #f5e0c3; /* Beige input fields */
+            color: #4a3f35;
+            border: 1px solid #c9a27e;
+        }
+        .form-control:focus {
+            background-color: #fff;
+            border-color: #8b5e3b;
+            box-shadow: none;
+        }
+        .btn-dark {
+            background-color: #6f4e37;
+            border-color: #6f4e37;
+        }
+        .btn-dark:hover {
+            background-color: #563d2d;
+        }
+        .navbar {
+            background-color: rgb(163, 100, 100) !important;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Fashion Hub</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="/about/">About</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="/">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/contact/">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-4">
+                <img src="{{ url_for('static', filename='uploads/' + cust_deets.cust_coverimage) if cust_deets.cust_coverimage else '/static/pix/cart.jpg' }}" class="img-fluid img-thumbnail">
+            </div>
+            <div class="col-md-8 profile-container">
+                <h2>Profile Information</h2>
+                <p><strong>Firstname:</strong> {{ cust_deets.cust_firstname }}</p>
+                <p><strong>Lastname:</strong> {{ cust_deets.cust_lname }}</p>
+                <p><strong>Email:</strong> {{ cust_deets.cust_email }}</p>
+                <p><strong>State ID:</strong> {{ cust_deets.cust_stateid }}</p>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-9 mx-auto profile-container">
+                <h2>Update your Profile</h2>
+                <form action="/profile/{{cust_deets.cust_id}}/update/" method="POST" enctype="multipart/form-data">
+                    <input type="hidden" name="csrf_token" value="{{csrf_token()}}">
+                    <div class="mb-3">
+                        <label>Firstname</label>
+                        <input type="text" name="cust_firstname" value="{{cust_deets.cust_firstname}}" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label>Lastname</label>
+                        <input type="text" name="cust_lname" value="{{cust_deets.cust_lname}}" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label>Email</label>
+                        <input type="text" name="cust_email" value="{{cust_deets.cust_email}}" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label>Password</label>
+                        <input type="password" name="cust_password" value="{{cust_deets.cust_password}}" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label>State</label>
+                        <select name="state" class="form-select">
+                            <option></option>
+                            {% for state in states %}
+                                <option value="{{state.state_id}}">{{state.state_id}}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label>Cover Image</label>
+                        <input type="file" name="cust_coverimage" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <button class="btn btn-dark">Update</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

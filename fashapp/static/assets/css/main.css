@@ -1,0 +1,86 @@
+.navclass{
+    background-color:rgb(163, 100, 100) !important;
+    position:sticky !important;
+    top:0px;
+    font-family: Arial, san-serif;
+    z-index:1000;
+    
+}
+.container-fluid{
+    font-family: Arial, san-serif;
+}
+a{
+    color:rgb(20, 19, 19) !important;
+}
+.cus-height{
+    height:500px;
+    background-size: cover;
+    background-color: rgba(27, 26, 26, 0.8)!important;
+
+} 
+.glo{
+    justify-content: center;
+    text-align: center;
+
+}
+.wear{
+    color:burlywood;
+}
+.st{
+    background: color #f9f9f9;;
+}
+.ab{
+color:brown;
+
+}
+.win{
+    background-color:rgb(163, 100, 100);
+}
+.pin{
+    background-color:#9c5858;
+}
+.bur{
+    background-color:#9c5858;
+}
+.ora{
+    background-color: #9c5858;
+}
+.ca{
+
+    color:brown;
+    font-family:Arial, Helvetica, sans-serif;
+}
+.cad{
+    font-family: Arial, Helvetica, sans-serif !important;
+}
+.tap{
+    color:brown;
+}
+.cad{
+    background-color:#f2f2f2 !important;
+}
+
+.foot{
+    color:rgb(134, 42, 42) !important; 
+}
+.ft{
+    color:rgb(134, 42, 42) !important; 
+}
+.fot{
+    color:rgb(134, 45, 42) !important; 
+}
+.sum{
+    color:rgb(134, 45, 42)
+}
+.wears{
+    color:rgb(134, 45, 42)
+}
+.len{
+    color:rgb(134, 45, 42)
+}
+.linky{
+    background-color:rgb(163, 100, 100) !important;
+}
+.custom-color{
+    background-color:#f2f2f2;
+} 
